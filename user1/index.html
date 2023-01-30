@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Get started with Voice Calling</title>
+</head>
+
+<body>
+ 
+    <h2 class="left-align">Get started with Voice Calling</h2>
+    <div class="row">
+        <div>
+            <button type="button" id="join">Join</button>
+            <button type="button" id="leave">Leave</button>
+        </div>
+    </div>
+    <br>
+    <div id="message"></div>
+    <br>
+    <button type="button" id="muteAudio">Mute Audio</button>
+    <br><label> Local Audio Level :</label>
+    <input type="range" min="0" id= "localAudioVolume" max="100" step="1"><br>
+    <label> Remote Audio Level :</label>
+    <input type="range" min="0" id= "remoteAudioVolume" max="100" step="1">
+    <br>
+    <label id="upLinkLabel">Uplink Quality:</label>
+    <label id="upLinkIndicator"></label><br>
+    <label id="downLinkLabel">Downlink Quality:</label>
+    <label id="downLinkIndicator"></label>
+    <p></p>
+    <button type="button" id="statistics">Show Statistics</button><br>
+    <label id="stats"></label>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
+    <script src="./AgoraRTC_N-4.15.1.js"></script>
+    <script src="./index.js"></script>
+
+
+</body>
+</html>
